@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Country View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CountryViewController" id="BYZ-38-t0r" customClass="CountryViewController" customModule="WalmartCountryList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-2s-2xc">
+                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7Oa-ju-aFz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OSo-37-03u"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Please search name or captal" translatesAutoresizingMaskIntoConstraints="NO" id="cgT-ow-OQs">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ayH-om-3VR"/>
+                                </connections>
+                            </searchBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Lhj-WM-BaI">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q7j-2s-2xc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5t4-rH-1Vr"/>
+                            <constraint firstItem="cgT-ow-OQs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F8t-eN-ijo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q7j-2s-2xc" secondAttribute="trailing" id="KFK-fr-Ehe"/>
+                            <constraint firstItem="q7j-2s-2xc" firstAttribute="top" secondItem="cgT-ow-OQs" secondAttribute="bottom" id="NRx-vD-cPL"/>
+                            <constraint firstItem="Lhj-WM-BaI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qbs-yE-MXi"/>
+                            <constraint firstItem="Lhj-WM-BaI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aXg-Uj-Tzy"/>
+                            <constraint firstItem="cgT-ow-OQs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cPz-Pb-UFE"/>
+                            <constraint firstItem="cgT-ow-OQs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jyo-Qm-izv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q7j-2s-2xc" secondAttribute="bottom" id="vhN-9P-aXi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryTableView" destination="q7j-2s-2xc" id="QYc-mu-fuE"/>
+                        <outlet property="indicator" destination="Lhj-WM-BaI" id="ANV-He-7gi"/>
+                        <outlet property="searchBar" destination="cgT-ow-OQs" id="nUJ-8c-Pb3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
